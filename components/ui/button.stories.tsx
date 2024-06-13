@@ -10,6 +10,34 @@ const meta: Meta<typeof Button> = {
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: [
+        'default',
+        'destructive',
+        'outline',
+        'secondary',
+        'ghost',
+        'link',
+      ],
+      description: 'Variant type for the button ',
+    },
+    size: {
+      description: 'Button sizes',
+    },
+    onClick: {
+      action: 'clicked',
+      description: 'Function Called when the button is clicked',
+    },
+    children: {
+      control: 'text',
+      description: 'Content to be displayed inside the button',
+    },
+    className: {
+      description: 'Custom tailwind css classes to applyh to the button',
+    },
+  },
 };
 
 export default meta;
